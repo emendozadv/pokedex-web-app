@@ -8,19 +8,18 @@ import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RouterLink, IconComponent, TextInputComponent, ReactiveFormsModule ],
+  imports: [RouterLink, IconComponent, TextInputComponent, ReactiveFormsModule],
   templateUrl: './list.component.html',
-  styleUrl: './list.component.css'
+  styleUrl: './list.component.css',
 })
 export class ListComponent {
-form = new FormGroup({
-  search: new FormControl(''),
-})
+  form = new FormGroup({
+    search: new FormControl(''),
+  });
 
-constructor() {
-  this.form.controls.search.valueChanges.subscribe((value) => {
-    console.log(value)
-  })
-}
-
+  constructor() {
+    this.form.controls.search.valueChanges.subscribe((value) => {
+      console.log(value);
+    });
+  }
 }

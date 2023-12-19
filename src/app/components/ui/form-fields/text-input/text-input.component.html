@@ -1,14 +1,21 @@
-<div
-[formGroup]="form"
- class="flex relative w-full h-full">
-
+<div [formGroup]="form" class="relative flex h-full w-full items-center">
+  @if (leftIcon != null) {
+    <app-icon class="absolute left-3 text-red-pokedex" [icon]="leftIcon" />
+  }
   <input
-  [id]="id"
-  [type]="type"
-  [name]="name"
-  [alt]="alt"
-  [formControlName]="name"
-  class="w-full h-full py-2 px-4 outline-none rounded-2xl shadow-inner shadow-gray-400"
-  >
+    [id]="id"
+    [type]="type"
+    [name]="name"
+    [alt]="alt"
+    [formControlName]="name"
+    [placeholder]="placeholder"
+    class="h-full w-full rounded-2xl px-4 py-2 shadow-inner shadow-gray-400 outline-none"
+    [ngClass]="{
+      'pl-11': !!leftIcon,
+      'pr-11': !!leftIcon
+    }"
+  />
+  @if (rightIcon != null) {
+    <app-icon class="absolute right-3" [icon]="rightIcon" />
+  }
 </div>
-
