@@ -4,11 +4,18 @@ import { RouterLink } from '@angular/router';
 import { IconComponent } from '../../components/ui/icon/icon.component';
 import { TextInputComponent } from '../../components/ui/form-fields/text-input/text-input.component';
 import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { RadioModalComponent } from '../../components/ui/form-fields/radio-modal/radio-modal.component';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RouterLink, IconComponent, TextInputComponent, ReactiveFormsModule],
+  imports: [
+    RouterLink,
+    IconComponent,
+    TextInputComponent,
+    ReactiveFormsModule,
+    RadioModalComponent,
+  ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
 })

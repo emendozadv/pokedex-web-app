@@ -1,0 +1,16 @@
+<button
+  type="button"
+  class="h-full w-full rounded-full bg-white p-2 shadow-inner shadow-gray-400 outline-none"
+  (click)="onClick()"
+>
+  <app-icon class="text-red-pokedex" icon="sharp" />
+</button>
+
+@if (open()) {
+  <div
+    class="fixed left-0 top-0 h-screen w-screen bg-black bg-opacity-50"
+    (click)="onClick()"
+    (keypress)="onClick()"
+    tabindex="0"
+  ></div>
+}

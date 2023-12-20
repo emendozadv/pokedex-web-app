@@ -10,14 +10,17 @@
       <app-icon class="h-7 text-white" icon="pokeball" />
       <h1 class="text-3x1 font-bold text-white">Pokédex</h1>
     </div>
-
-    <app-text-input
-      [form]="form"
-      id="search"
-      name="search"
-      placeholder="Search"
-      leftIcon="search"
-      rightIcon="pokeball"
-    />
+    <div class="flex w-full gap-4">
+      <app-text-input
+        [form]="form"
+        id="search"
+        name="search"
+        placeholder="Search"
+        leftIcon="search"
+        rightIcon="pokeball"
+        class="flex-1"
+      />
+      <app-radio-modal />
+    </div>
   </div>
 </div>
