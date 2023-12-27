@@ -8,9 +8,36 @@
 
 @if (open()) {
   <div
-    class="fixed left-0 top-0 h-screen w-screen bg-black bg-opacity-50"
+    class="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-black bg-opacity-50"
     (click)="onClick()"
     (keypress)="onClick()"
     tabindex="0"
-  ></div>
+  >
+    <div
+      class="rounded-xl bg-red-pokedex p-1"
+      (click)="onClickCard($event)"
+      (keypress)="onClick()"
+      tabindex="0"
+    >
+      <fieldset [formGroup]="form">
+        <legend class="px-5 py-4 text-white">Sort by:</legend>
+        <div class="flex flex-col gap-4 rounded-lg bg-white px-5 py-4">
+          @for (option of options; track option.id) {
+            <div class="flex items-center gap-2">
+              <input
+                [formControlName]="name"
+                class="text-red-pokedex focus:ring-red-pokedex"
+                type="radio"
+                [id]="option.id"
+                [name]="name"
+                [value]="option.value"
+                checked
+              />
+              <label [for]="option.id"> {{ option.label }}</label>
+            </div>
+          }
+        </div>
+      </fieldset>
+    </div>
+  </div>
 }
