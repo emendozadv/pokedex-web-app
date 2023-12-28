@@ -49,5 +49,7 @@ export class ListComponent {
     this.form.controls.sortBy.valueChanges.subscribe((value) => {
       console.log(value);
     });
+
+    //this.getAllPokemons();
   }
 }
