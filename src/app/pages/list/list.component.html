@@ -26,15 +26,9 @@
 
   <div class="grid grid-cols-3 gap-2">
     @for (pokemon of pokemons(); track pokemon.name) {
-      <div class="flex flex-col">
-        <img
-          class="w-full"
-          [src]="pokemon.data.sprites.other.home.front_default"
-          [alt]="pokemon.name"
-        />
-
-        <div>{{ pokemon.name }} - {{ pokemon.data.id }}</div>
-      </div>
+      <router-link [routerLink]="['/detail', pokemon.data.id]">
+        <app-pokemon-card [pokemon]="pokemon" />
+      </router-link>
     }
   </div>
 </div>

@@ -1,0 +1,18 @@
+<div
+  class="relative flex w-full flex-col rounded-lg bg-white px-2 py-1 shadow-lg before:absolute before:left-0 before:top-1/2 before:h-1/2 before:w-full before:rounded-lg before:bg-gray-200"
+>
+  <div class="z-10 flex w-full justify-end">
+    {{ pokemon.data.id }}
+  </div>
+
+  <div class="z-10 flex-1">
+    <img
+      class="w-full"
+      [src]="pokemon.data.sprites.other.home.front_default"
+      [alt]="pokemon.name"
+    />
+  </div>
+  <div class="z-10 flex w-full justify-center">
+    {{ pokemon.name }}
+  </div>
+</div>

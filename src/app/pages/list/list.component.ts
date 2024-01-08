@@ -9,6 +9,7 @@ import {
   RadioOption,
 } from '../../components/ui/form-fields/radio-modal/radio-modal.component';
 import { PokemonsService } from '../../shared/pokemons/pokemons.service';
+import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
 
 @Component({
   selector: 'app-list',
@@ -19,6 +20,8 @@ import { PokemonsService } from '../../shared/pokemons/pokemons.service';
     TextInputComponent,
     ReactiveFormsModule,
     RadioModalComponent,
+    PokemonCardComponent,
+    RouterLink,
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
